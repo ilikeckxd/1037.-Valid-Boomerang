@@ -1,0 +1,19 @@
+class Solution(object):
+    def isBoomerang(self, points):
+        """
+        :type points: List[List[int]]
+        :rtype: bool
+        """
+        x0, y0 = points[0]
+        x1, y1 = points[1]
+        x2, y2 = points[2]
+        d0 = x1-x0
+        d1 = x2-x0
+        d2 = y1-y0
+        d3 = y2-y0
+        return d0*d3 - d2*d1 != 0  
+    #把成比例的除法改成乘法跟減法就可以了
+    
+    
+    #Runtime: 24 ms, faster than 100.00% of Python online submissions for Valid Boomerang.
+#Memory Usage: 11.6 MB, less than 100.00% of Python online submissions for Valid Boomerang.
